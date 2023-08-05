@@ -12,7 +12,12 @@ end
 
 class Person < PoorPerson 
   # o '<' é uma convenção para herança
-  
+
+  # attr_reader :name, :age # cria os métodos 'name' e 'age' que retornam as variáveis de instância '@name' e '@age'
+  # attr_writer :name, :age # cria os métodos 'name=' e 'age=' que alteram as variáveis de instância '@name' e '@age'
+
+  attr_acessor :name, :age # cria os métodos 'name', 'name=' e 'age', 'age=' que retornam e alteram as variáveis de instância '@name' e '@age'
+
   def initialize(name, age)
     # são variáveis globais
     @name = name 
